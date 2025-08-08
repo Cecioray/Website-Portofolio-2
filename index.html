@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tshafa Andida Cecioray | AI, Web, Design & Cybersecurity</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles for the elegant & creative theme */
+        :root {
+            --bg-color: #F9FAFB; /* gray-50 */
+            --text-primary: #111827; /* gray-900 */
+            --text-secondary: #4B5563; /* gray-600 */
+            --border-color: #E5E7EB; /* gray-200 */
+            --accent-color: #2563EB; /* blue-600 */
+        }
+        html {
+             -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+        }
+        #particle-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Place it behind all content */
+        }
+        .section-heading h2 {
+            font-weight: 700;
+            font-size: 1rem; /* 16px */
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .portfolio-item .portfolio-image-container {
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .portfolio-item:hover .portfolio-image-container {
+            transform: scale(1.05);
+        }
+        .portfolio-item .arrow-icon {
+            transition: transform 0.3s ease;
+        }
+        .portfolio-item:hover .arrow-icon {
+            transform: translateX(5px) rotate(-45deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Animated Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Header -->
+    <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200/80">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-gray-900 tracking-tight">Tshafa Andida C.</a>
+            <div class="hidden md:flex space-x-8 items-center font-semibold text-gray-600">
+                <a href="#portfolio" class="hover:text-gray-900 transition-colors">Portofolio</a>
+                <a href="#about" class="hover:text-gray-900 transition-colors">Tentang</a>
+                <a href="#contact" class="hover:text-gray-900 transition-colors">Kontak</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <a href="#portfolio" class="block py-3 px-6 text-gray-600 hover:bg-gray-50 hover:text-gray-900">Portofolio</a>
+            <a href="#about" class="block py-3 px-6 text-gray-600 hover:bg-gray-50 hover:text-gray-900">Tentang</a>
+            <a href="#contact" class="block py-3 px-6 text-gray-600 hover:bg-gray-50 hover:text-gray-900">Kontak</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 relative z-10">
+        <!-- Hero Section -->
+        <section id="hero" class="py-24 md:py-40">
+            <div class="max-w-4xl">
+                <h1 class="text-5xl sm:text-6xl md:text-7xl font-black text-gray-900 leading-tight">
+                    Inovator Teknologi Multidisiplin
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed">
+                    Saya merancang dan membangun solusi digital yang cerdas, indah, dan aman melalui keahlian di bidang AI, Web Development, Desain, dan Cybersecurity.
+                </p>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="fade-in">
+            <div class="space-y-16 md:space-y-20">
+                <!-- Project 1 (BRI Life Flyers) -->
+                <a href="#" class="group grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-12 items-center portfolio-item">
+                    <div class="overflow-hidden rounded-lg md:col-span-3 portfolio-image-container bg-white">
+                        <!-- PENTING: Pastikan nama file Anda adalah "flyer-brilife.jpg" dan berada di dalam folder "images" -->
+                        <img src="images/flyer-brilife.jpg" alt="Flyer Instagram BRI Life" class="w-full h-full object-cover portfolio-image">
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="font-semibold text-blue-600">Graphic Design</p>
+                        <h3 class="mt-1 text-2xl md:text-3xl font-bold text-gray-900">Desain Flyer Instagram BRI Life</h3>
+                        <p class="mt-3 text-gray-600">Merancang berbagai materi promosi visual untuk kampanye media sosial asuransi BRI Life, fokus pada komunikasi yang jelas dan menarik.</p>
+                        <div class="mt-4 inline-flex items-center font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">
+                            <span>Lihat Proyek</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                        </div>
+                    </div>
+                </a>
+                <!-- Project 2 (Celetuk) -->
+                <a href="https://www.celetuk.site" target="_blank" rel="noopener noreferrer" class="group grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-12 items-center portfolio-item">
+                    <div class="overflow-hidden rounded-lg md:col-span-3 md:order-2 portfolio-image-container bg-white">
+                        <!-- PENTING: Pastikan nama file Anda adalah "screenshot-celetuk.png" dan berada di dalam folder "images" -->
+                        <img src="images/screenshot-celetuk.png" alt="Proyek Website Celetuk" class="w-full h-full object-cover portfolio-image">
+                    </div>
+                    <div class="md:col-span-2 md:order-1 md:text-right">
+                        <p class="font-semibold text-blue-600">Web Development</p>
+                        <h3 class="mt-1 text-2xl md:text-3xl font-bold text-gray-900">Website "Celetuk"</h3>
+                        <p class="mt-3 text-gray-600">Co-pilot kreatif berbasis AI untuk menghasilkan caption, hashtag, dan rekomendasi lagu secara instan.</p>
+                        <div class="mt-4 inline-flex items-center font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">
+                            <span>Lihat Proyek</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                        </div>
+                    </div>
+                </a>
+                <!-- Project 3 (Aya Sacred Wear) -->
+                <a href="https://www.aya.eco" target="_blank" rel="noopener noreferrer" class="group grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-12 items-center portfolio-item">
+                    <div class="overflow-hidden rounded-lg md:col-span-3 portfolio-image-container bg-white">
+                        <!-- PENTING: Pastikan nama file Anda adalah "screenshot-ayaeco.png" dan berada di dalam folder "images" -->
+                        <img src="images/screenshot-ayaeco.png" alt="Proyek Website Aya Sacred Wear" class="w-full h-full object-cover portfolio-image">
+                    </div>
+                    <div class="md:col-span-2">
+                        <p class="font-semibold text-blue-600">Web Development</p>
+                        <h3 class="mt-1 text-2xl md:text-3xl font-bold text-gray-900">Website Aya Sacred Wear</h3>
+                        <p class="mt-3 text-gray-600">Membangun platform e-commerce untuk brand fashion berkelanjutan, fokus pada pengalaman pengguna yang bersih dan modern.</p>
+                        <div class="mt-4 inline-flex items-center font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">
+                            <span>Lihat Proyek</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- About & Skills Section -->
+        <section id="about" class="py-24 md:py-40 grid grid-cols-1 md:grid-cols-3 gap-12 fade-in">
+            <div class="md:col-span-1">
+                <div class="section-heading border-b border-gray-200 pb-4 mb-4">
+                    <h2 class="text-base font-bold tracking-widest uppercase text-gray-500">Tentang Saya</h2>
+                </div>
+            </div>
+            <div class="md:col-span-2 text-lg text-gray-600 space-y-4 leading-relaxed">
+                <p>
+                    Perjalanan saya di dunia teknologi didorong oleh hasrat untuk memecahkan masalah. Saya percaya bahwa perpaduan antara desain yang berpusat pada pengguna, rekayasa perangkat lunak yang andal, dan kecerdasan buatan adalah kunci untuk menciptakan produk digital yang luar biasa.
+                </p>
+                <p>
+                    Saya mendekati setiap proyek dengan pola pikir analitis dan mata yang tajam terhadap detail, memastikan setiap solusi tidak hanya fungsional tetapi juga intuitif dan aman.
+                </p>
+                <div class="pt-8">
+                    <h3 class="font-bold text-gray-800 mb-4">Keahlian Inti:</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-100 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">AI Research</span>
+                        <span class="bg-gray-100 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Web Development</span>
+                        <span class="bg-gray-100 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">UI/UX Design</span>
+                        <span class="bg-gray-100 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Cybersecurity</span>
+                        <span class="bg-gray-100 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">React</span>
+                        <span class="bg-gray-100 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Node.js</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer & Contact -->
+    <footer id="contact" class="py-24 md:py-32 bg-gray-900 text-white relative z-10">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold">Mari Berkolaborasi</h2>
+            <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-300">
+                Punya ide menarik atau tantangan yang perlu diselesaikan? Saya siap membantu.
+            </p>
+            <a href="mailto:tshafaandidacecioray@gmail.com" class="mt-10 inline-block px-10 py-4 font-semibold text-gray-900 bg-white rounded-lg hover:bg-gray-200 transition-colors">
+                Kirim Email
+            </a>
+            <div class="mt-16 flex justify-center space-x-6">
+                <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="github" class="w-6 h-6"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                <a href="https://instagram.com" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+            </div>
+            <div class="mt-16 border-t border-gray-700 pt-8 text-sm text-gray-500">
+                <p>&copy; 2024 Tshafa Andida Cecioray. Didesain & Dibangun dengan Penuh Perhatian.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts at the end of body for reliable execution -->
+    <script src="https://cdn.jsdelivr.net/npm/lucide-static@latest/umd/lucide.js" defer></script>
+    <script>
+        // This function holds all the javascript logic.
+        function initializeApp() {
+            // Initialize Lucide Icons
+            try {
+                if (lucide) {
+                    lucide.createIcons();
+                }
+            } catch (e) {
+                console.error("Lucide icons could not be initialized.", e);
+            }
+
+            // Mobile Menu Toggle Logic
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+            
+            // Fade-in animation on scroll logic
+            const sections = document.querySelectorAll('.fade-in');
+            if (sections.length > 0) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+
+                sections.forEach(section => {
+                    observer.observe(section);
+                });
+            }
+
+            // Floating Shapes Animation Logic
+            const canvas = document.getElementById('particle-canvas');
+            if (canvas) {
+                const ctx = canvas.getContext('2d');
+                let shapes = [];
+
+                function setCanvasSize() {
+                    canvas.width = window.innerWidth;
+                    canvas.height = document.documentElement.scrollHeight;
+                }
+
+                class Shape {
+                    constructor(x, y, radius, color, speed) {
+                        this.x = x;
+                        this.y = y;
+                        this.radius = radius;
+                        this.color = color;
+                        this.speed = speed;
+                    }
+
+                    draw() {
+                        ctx.beginPath();
+                        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+                        ctx.fillStyle = this.color;
+                        ctx.fill();
+                    }
+
+                    update() {
+                        this.y -= this.speed;
+                        if (this.y < -this.radius) {
+                            this.y = canvas.height + this.radius;
+                            this.x = Math.random() * canvas.width;
+                        }
+                        this.draw();
+                    }
+                }
+
+                function init() {
+                    shapes = [];
+                    let numberOfShapes = 25; // A good number for a subtle effect
+                    for (let i = 0; i < numberOfShapes; i++) {
+                        let radius = Math.random() * 40 + 10;
+                        let x = Math.random() * canvas.width;
+                        let y = Math.random() * canvas.height;
+                        let speed = Math.random() * 0.15 + 0.05; // Very slow and varied speed
+                        let color = 'rgba(229, 231, 235, 0.6)'; // Subtle gray color from the palette
+                        shapes.push(new Shape(x, y, radius, color, speed));
+                    }
+                }
+
+                function animate() {
+                    requestAnimationFrame(animate);
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    for (let i = 0; i < shapes.length; i++) {
+                        shapes[i].update();
+                    }
+                }
+
+                let resizeTimeout;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimeout);
+                    resizeTimeout = setTimeout(() => {
+                        setCanvasSize();
+                        init();
+                    }, 250);
+                });
+
+                setCanvasSize();
+                init();
+                animate();
+            }
+        }
+        
+        // The most reliable way to run the script.
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initializeApp);
+        } else {
+            initializeApp();
+        }
+    </script>
+
+</body>
+</html>
