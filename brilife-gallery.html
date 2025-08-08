@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Proyek: BRI Life - Tshafa Andida Cecioray</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #F9FAFB;
+            --text-primary: #111827;
+            --accent-color: #2563EB;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Sederhana -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 border-b border-gray-200/80">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-gray-900 tracking-tight">Tshafa Andida C.</a>
+            <a href="index.html#portfolio" class="font-semibold text-gray-600 hover:text-gray-900 transition-colors inline-flex items-center">
+                <i data-lucide="arrow-left" class="w-4 h-4 mr-2"></i>
+                Kembali ke Portofolio
+            </a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-16 md:py-24">
+        <!-- Judul Halaman -->
+        <div class="max-w-3xl">
+            <p class="font-semibold text-blue-600">Graphic Design</p>
+            <h1 class="mt-2 text-4xl sm:text-5xl font-black text-gray-900 leading-tight">
+                Galeri Proyek: Desain Flyer Instagram BRI Life
+            </h1>
+            <p class="mt-4 text-lg text-gray-600">
+                Berikut adalah kumpulan beberapa desain flyer yang telah dibuat untuk kampanye media sosial BRI Life.
+            </p>
+        </div>
+
+        <!-- Grid Galeri -->
+        <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Item Galeri 1 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                <!-- PENTING: Ganti src dengan path gambar Anda di folder images -->
+                <img src="images\Feeds 4.jpg" alt="Flyer BRI Life 1" class="w-full h-auto object-cover">
+            </div>
+
+            <!-- Item Galeri 2 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                <!-- PENTING: Ganti src dengan path gambar Anda di folder images -->
+                <img src="images\Hari Buruh 3.jpg" alt="Flyer BRI Life 2" class="w-full h-auto object-cover">
+            </div>
+
+            <!-- Item Galeri 3 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                <!-- PENTING: Ganti src dengan path gambar Anda di folder images -->
+                <img src="images\Idul adha v2.jpg" alt="Flyer BRI Life 3" class="w-full h-auto object-cover">
+            </div>
+
+            <!-- Item Galeri 4 -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300">
+                <!-- PENTING: Ganti src dengan path gambar Anda di folder images -->
+                <img src="images\halal bihalal.jpg" alt="Flyer BRI Life 4" class="w-full h-auto object-cover">
+            </div>
+
+            <!-- Salin dan tempel blok di atas untuk menambahkan lebih banyak gambar -->
+
+        </div>
+    </main>
+
+    <!-- Footer Sederhana -->
+    <footer class="py-16 mt-16 border-t border-gray-200">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2024 Tshafa Andida Cecioray.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/lucide-static@latest/umd/lucide.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                if(lucide) {
+                    lucide.createIcons();
+                }
+            } catch (e) {
+                console.error("Lucide icons could not be initialized.", e);
+            }
+        });
+    </script>
+
+</body>
+</html>
